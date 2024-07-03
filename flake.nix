@@ -64,7 +64,10 @@
           };
         }) nixpkgs.legacyPackages;
 
-      checks = builtins.mapAttrs (system: pkgs: { }) nixpkgs.legacyPackages;
+      checks = builtins.mapAttrs (system: pkgs: {
+        default = self.packages.${system}.default;
+        shell = self.devShells.${system}.default;
+      }) nixpkgs.legacyPackages;
 
       githubActions = nix-github-actions.lib.mkGithubMatrix {
         checks =
