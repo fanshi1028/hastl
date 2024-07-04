@@ -29,6 +29,13 @@
               monad-metrics = markUnbroken hsuper.monad-metrics;
               scotty = hsuper.scotty_0_22;
               wai-middleware-metrics = dontCheck hsuper.wai-middleware-metrics;
+              warp = dontCheck hsuper.warp_3_4_1;
+              auto-update = hsuper.auto-update_0_2_0;
+              http2 = hsuper.http2_5_2_1;
+              time-manager = hsuper.time-manager_0_1_0;
+              network-control = hsuper.network-control_0_1_0;
+              fast-logger = hsuper.fast-logger_3_2_3;
+              wai-extra = hsuper.wai-extra_3_1_15;
             };
         });
     in {
